@@ -138,7 +138,7 @@ window.PORTFOLIO = {
   "about": {
     "paragraphs": [
       "I’m Sohan, a Mechanical Engineering student at UT Arlington and a member of the Honors College. I’m interested in mechanical design, robotics, and manufacturing, and I enjoy taking an idea from a CAD model to something I can build and test.",
-      "Outside of engineering, I enjoy working on cars and following motorsport. I’ve also volunteered at MotoAmerica at Circuit of the Americas."
+      "Outside of engineering, I enjoy working on cars and following motorsport. I’ve also volunteered as a track marshal at MotoAmerica at Circuit of the Americas."
     ],
     "interests": [
       "Mechanical design",
@@ -276,6 +276,16 @@ window.PORTFOLIO = {
       "title": "Office Assistant",
       "organization": "Heights in Pecan",
       "period": "September 2026 – present",
+      "description": ""
+    }
+  ],
+  "schoolSpirit": "Mav Up!",
+  "utaAffiliations": "UTA Honors College · AIAA CubeSat · Formula SAE",
+  "resumeVolunteering": [
+    {
+      "title": "Track Marshal (Volunteer)",
+      "organization": "MotoAmerica · Circuit of the Americas",
+      "period": "",
       "description": ""
     }
   ]

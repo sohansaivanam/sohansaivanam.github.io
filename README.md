@@ -221,6 +221,9 @@ The Resume page overview is also editable in content.js:
 | `resumeExperience` | Your professional internship at Brahmastra |
 | `resumeLeadership` | AIAA CubeSat, Formula SAE, and Entrepreneurship Club roles |
 | `resumeCampus` | PLTL teaching and Office Assistant roles |
+| `resumeVolunteering` | Track Marshal volunteering at MotoAmerica |
+| `schoolSpirit` | The short “Mav Up!” line on About Me |
+| `utaAffiliations` | The blue UTA Honors College, AIAA CubeSat, and Formula SAE line on About Me |
 | `resumeEducation` | Your degree, university, dates, and academic summary |
 | `resumeSkills` | The expandable “More tools & methods” list |
 | `resumeCredentialId` | Which certificate to highlight; use its exact `credentialId` from `certifications` |
@@ -230,7 +233,7 @@ A capability entry uses `title`, `tools`, `description`, `projectSlug`, and `lin
 
 An education or experience entry uses `title`, `organization`, `period`, and `description`. Set `description` to `""` to show only the role, organization, and dates. Set `period` to `""` to omit a date when one has not been confirmed. Optional `href` and `linkLabel` fields add a related project link. A skills entry uses `title` and an `items` list. Keep the existing punctuation when changing these values. The website overview is independent of the PDF; update both when your experience changes.
 
-The page now starts with education and your CSWP credential, followed by skills in practice, professional internship experience, clubs and leadership, and teaching and campus roles. Click “More tools & methods” to expand the supporting tools. The four small links below Download jump to sections on this page. On a phone, education and credential columns stack into a single reading order.
+The page now starts with education and your CSWP credential, followed by skills in practice, professional internship experience, clubs and leadership, teaching and campus roles, and volunteering. Click “More tools & methods” to expand the supporting tools. The five small links below Download jump to sections on this page, including Volunteering. On a phone, education and credential columns stack into a single reading order.
 
 The reverse engineering project is at `projects/reverse-engineering.html`. Its summary comes from your attached resume. Replace its workflow illustration with your actual scan and CAD images when you have them; the current illustration is clearly labeled.
 
@@ -240,7 +243,7 @@ Your headings use **Space Grotesk** and your body text uses **Inter**. Their fil
 
 To change the font choices, open `assets/styles.css` and search for `--body` and `--heading`. Font sizes and the Resume layout are near the bottom of that file. Leave the two `@font-face` rules at the top alone unless you are replacing the font files too.
 
-For accent colors, open assets/styles.css. At the top you will see two sets of variables: `:root` for light mode and `:root[data-theme="dark"]` for dark mode. The blue is named `--blue`. The primary orange text accent is `--accent`, and `--orange` is the bright decorative orange. These are inspired by UTA’s blue and orange; the orange text uses a darker shade in light mode for readability. Its current values are:
+For accent colors, open assets/styles.css. At the top you will see two sets of variables: `:root` for light mode and `:root[data-theme="dark"]` for dark mode. The blue is named `--blue`. The orange text accent is `--accent`, and `--orange` is the bright decorative orange. Blue is the primary accent for interactive controls. These are inspired by UTA’s blue and orange; the orange text uses a darker shade in light mode for readability. Its current values are:
 
 ```css
 /* Light mode */
@@ -250,6 +253,18 @@ For accent colors, open assets/styles.css. At the top you will see two sets of v
 ```
 
 Change the colors in both palettes if you want a different accent. Other variables control the page, text, dividers, and surfaces. Keep the colon and semicolon, and check readability in both themes. The project concept SVG illustrations have their own colors and are replaced with actual project images independently.
+
+### Browser tab icon (favicon)
+
+The old blue S logo has been removed. Every HTML page now points to `assets/favicon-empty.svg`, a transparent icon. The new filename helps browsers stop showing the old cached logo. Keep this file when uploading the updated website. Close the old portfolio tab and open the updated site again if your browser still shows the old icon.
+
+If you later want a custom tab icon, add an SVG or PNG to `assets` and change the `<link rel="icon" ...>` line near the top of **every** HTML page. Pages inside `projects` use `../assets/` rather than `assets/`. Use a fresh filename for a new icon to help avoid cached artwork.
+
+### Volunteering and school spirit
+
+Your Track Marshal volunteering appears in the About introduction and in a separate Resume section. To edit it, open `assets/content.js`, find `resumeVolunteering`, and change the quoted text. The date is blank until you provide one; add it to `period` when ready. Edit `about.paragraphs` separately to change the personal introduction. The downloadable resume PDF is a separate document and must be replaced if you want this role added there too.
+
+Find `schoolSpirit` in the same file to edit “Mav Up!” Find `utaAffiliations` to edit the short affiliations line underneath. It names your actual UTA involvement. Blue is the main color for links, active navigation, project hover states, and the resume download button. Hovering over a navigation tab turns its text and underline orange; keyboard focus uses the same treatment. Orange also appears on “Mav Up!”, your homepage role line, portrait corners, and small decorative marks.
 
 ### Personal style and motion
 
